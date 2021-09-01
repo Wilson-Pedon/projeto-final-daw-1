@@ -1,0 +1,67 @@
+/**************************************
+Estilizando formulários */
+
+body {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: #643d87 url("/fundo.jpg") no-repeat top center;
+}
+
+#container {
+    width: 400px; /*Largura*/
+    height: 300px; /*Altura*/
+    background-color: rgba(255, 255, 255, 0.3); /*255= Cor  0.3=Transparencia*/
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px; /*Arredondar os cantos*/
+    margin: 0 auto; /*Centraliza o quadrado*/
+    margin-top: 120px; /*espaçamento Superior*/
+    text-align: center; /*Centralia a foto*/
+}
+
+#container img {
+    width: 120px; /*Largura*/
+    height: 120px; /*Altura*/
+    margin: -60px; /**/
+    margin-bottom: 30px; /**/
+}
+
+input {
+    height: 40px; /*Altura*/
+    width: 80%; /*Largura*/
+    font-size: 18px; /*Font do texto*/
+    margin-bottom: 10px; /*Espaçamento*/
+    background: #ffff; /*Cor de fundo*/
+    /*Colocar img como background -- espaçamento lateral*/
+    padding-left: 40px; /*espaçamento lateral*/
+    border: none; /*Para não aparecer a borda*/
+    /*Formatar os ícones*/
+    background-repeat: no-repeat; /*Para não repitir a img*/
+    background-position: 10px; /*espaçamento*/
+}
+
+
+/*Formatar os ícones*/
+input.email {
+    background-image: url(/icone-usuario.png);
+}
+
+input.senha {
+    background-image: url(/icone-cadeado.png);
+}
+
+/*Configura o botão*/
+input.submit {
+    color: #ffffff; /*Cor de fundo (texto)*/
+    background-color: #f79300; /*cor do botão*/
+    border: 2px solid #db7d00; /*Cor da borda com borda*/
+    /*Centralizando o botão*/
+    padding: 5px 20px;
+    height: 45px;
+    width: 90%;
+    /*degrade de cores*/
+    background: linear-gradient(to bottom, #faa600, #f68a00);
+    /*Para pegar em navegadores mas antigos*/
+    background: -webkit-linear-gradient(to bottom, #faa600, #f68a00);
+    background: -moz-linear-gradient(to bottom, #faa600, #f68a00);
+    background: -o-linear-gradient(to bottom, #faa600, #f68a00);
+}

@@ -1,0 +1,58 @@
+
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    margin-left: 5px;
+    width: 99%;
+    border-spacing: none;
+    background-color: black;
+}
+
+th{
+    background-color: whitesmoke;
+    text-align: center;
+    height: 50px;
+}
+
+td {
+    background-color: white;
+    text-align: center;
+    margin: auto;
+}
+
+td, th{
+    margin: 10px;
+    padding: 10px;
+    width: 100px;
+}
+
+h1{
+    text-align: center;
+    font-family: "Fira Code Light";
+}
+
+
+a {
+    display: block;
+    width: 70px;
+    line-height: 10px;
+    padding: 5px;
+    margin: 5px;
+    background-color: #000;
+    color: #FFF;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+
+
+
+
+
+
+
