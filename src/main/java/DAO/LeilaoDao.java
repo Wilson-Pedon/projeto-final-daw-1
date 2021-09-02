@@ -53,31 +53,4 @@ public class LeilaoDao {
         return query.getResultList();
     }
 
-    public static void main(String[] args) {
-
-//        List <Leilao> leilao = (List<Leilao>) new LeilaoDao().getID(195);
-//
-//        for (Leilao l : leilao) {
-//                System.out.println(l);
-//        }
-
-        Calendar c = Calendar.getInstance();
-        java.util.Date data = c.getTime();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String dataminha = sdf.format(data);
-
-        List <Leilao> list = new LeilaoDao().BuscarObjeto("Ps5");
-        List<String> valor = new ArrayList<>();
-
-        for(Leilao l : list) {
-            l.getValorMinimo();
-        }
-
-
-
-
-
-
-    }
-
 }

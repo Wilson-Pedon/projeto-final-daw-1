@@ -10,7 +10,7 @@ public class NovoUpdate {
     private final HttpServletRequest req;
     private final HttpServletResponse resp;
 
-    public NovoUpdate(HttpServletRequest req, HttpServletResponse resp){
+    public NovoUpdate(HttpServletRequest req, HttpServletResponse resp) {
         this.req = req;
         this.resp = resp;
     }
@@ -20,10 +20,10 @@ public class NovoUpdate {
         String nome = req.getParameter("nome");
         String valor = req.getParameter("valor");
         String data = req.getParameter("data");
-        req.setAttribute("pID" , id);
+        req.setAttribute("pID", id);
         req.setAttribute("nome", nome);
-        req.setAttribute("data",data);
-        req.setAttribute("valor",valor);
+        req.setAttribute("data", data);
+        req.setAttribute("valor", valor);
         req.getRequestDispatcher("/WEB-INF/pages/update-leilao.jsp").forward(req, resp);
         System.out.println("O id é: " + id + nome + data + valor);
     }

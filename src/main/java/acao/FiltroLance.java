@@ -19,31 +19,25 @@ public class FiltroLance {
     private final HttpServletResponse resp;
     private final HttpServletRequest req;
 
-    public FiltroLance(HttpServletResponse resp, HttpServletRequest req){
+    public FiltroLance(HttpServletResponse resp, HttpServletRequest req) {
         this.resp = resp;
         this.req = req;
     }
 
     public void executa() throws IOException, ServletException {
-        valorDiferenteLance valorLance = new valorDiferenteLance();
         String nome = req.getParameter("nome");
         String item = req.getParameter("nome");
-        System.out.println("O tipo de status é : " + nome);
         req.setAttribute("objeto", item);
-        System.out.println("O item é:" + item);
-        req.setAttribute("nome" , nome);
+        req.setAttribute("nome", nome);
         List<Lance> list = new LanceDao().BuscarObjeto(nome);
 
-
         System.out.println(list);
-        List <Lance> lista = new LanceDao().Seguinte_Professor_EuFiqueiUmaTardeInteiraPraFazerIsto_ParaNaoUsar_MasComoEUGasteiUmaTardeInteira_ElaVaiFicarAki_TiveQueAprenderHQL(nome);
+        List<Lance> lista = new LanceDao().Seguinte_Professor_EuFiqueiUmaTardeInteiraPraFazerIsto_ParaNaoUsar_MasComoEUGasteiUmaTardeInteira_ElaVaiFicarAki_TiveQueAprenderHQL(nome);
         List<String> valor = new ArrayList<>();
-        for(Lance l : lista) {
+        for (Lance l : lista) {
             valor.add(l.getNome());
         }
-        String veficarNome = valor.get(valor.size() -1);
-        System.out.println(veficarNome);
-
+        String veficarNome = valor.get(valor.size() - 1);
 
         req.setAttribute("list", list);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/pages/listalance.jsp");

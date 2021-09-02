@@ -15,7 +15,7 @@
 
 <form action="deu_erro">
 
-    <img src="${pageContext.request.contextPath}/augusto.jpg" alt="Comunismo" width="400px">
+    <img src="${pageContext.request.contextPath}/WEB-INF/img/augusto.jpg" alt="Comunismo" width="400px">
     <h2 style="color: aliceblue">PROFESSOR O SENHOR CONHECE ESTE SER HUMANO ???</h2>
     <a href="http://localhost:8080/Desenvolivmento_Web3_war/">INCIO</a>
 

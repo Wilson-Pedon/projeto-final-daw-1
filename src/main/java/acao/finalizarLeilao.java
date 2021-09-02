@@ -10,6 +10,7 @@ import regraDeNegocio.LeilaoRegras;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -22,10 +23,12 @@ import java.util.Properties;
 public class finalizarLeilao {
     private final HttpServletRequest req;
     private final HttpServletResponse resp;
+
     public finalizarLeilao(HttpServletResponse resp, HttpServletRequest req) {
         this.resp = resp;
         this.req = req;
     }
+
     public void executa() throws ServletException, IOException {
         LanceRegras lanceRegras = new LanceRegras();
         int id = Integer.valueOf(req.getParameter("id"));
@@ -42,3 +45,4 @@ public class finalizarLeilao {
         listarLeilao.executa();
     }
 }
+

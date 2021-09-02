@@ -2,6 +2,7 @@ package service;
 
 import DAO.ClienteDao;
 import model.Cliente;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,7 +12,7 @@ import java.io.IOException;
 
 
 @WebServlet(name = "cadastro-cliente", value = "/cadastro_cliente")
-public class cadastroCliente extends HttpServlet{
+public class cadastroCliente extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

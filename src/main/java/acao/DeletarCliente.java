@@ -17,7 +17,7 @@ public class DeletarCliente {
     private final HttpServletRequest req;
     private final HttpServletResponse resp;
 
-    public DeletarCliente(HttpServletResponse resp, HttpServletRequest req){
+    public DeletarCliente(HttpServletResponse resp, HttpServletRequest req) {
         this.resp = resp;
         this.req = req;
     }
@@ -25,10 +25,9 @@ public class DeletarCliente {
     public void executa() throws ServletException, IOException {
         ClienteDao dao = new ClienteDao();
         String id = req.getParameter("id");
-        System.out.println("O id é: " + id);
         dao.deleta(Integer.parseInt(id));
 
-        ListarCliente listarCliente = new ListarCliente(resp,req);
+        ListarCliente listarCliente = new ListarCliente(resp, req);
         listarCliente.executa();
     }
 

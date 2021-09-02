@@ -8,10 +8,10 @@ import java.io.IOException;
 
 public class Logaut {
 
-    private  HttpServletResponse resp;
-    private  HttpServletRequest req;
+    private HttpServletResponse resp;
+    private HttpServletRequest req;
 
-    public Logaut(HttpServletResponse resp, HttpServletRequest req){
+    public Logaut(HttpServletResponse resp, HttpServletRequest req) {
         this.resp = resp;
         this.req = req;
     }

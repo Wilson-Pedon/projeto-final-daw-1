@@ -11,10 +11,15 @@
 <head>
     <title>Leilao</title>
 
-    <style><%@include file="/WEB-INF/pages/lista.css"%></style>
-    <style><%@include file="/WEB-INF/pages/butaoquepisca.css"%></style>
-    <style><%@include file="/WEB-INF/pages/butaolink.css"%></style>
-
+    <style>
+        <%@include file="/WEB-INF/style/lista.css" %>
+    </style>
+    <style>
+        <%@include file="/WEB-INF/style/butaoquepisca.css" %>
+    </style>
+    <style>
+        <%@include file="/WEB-INF/style/butaolink.css" %>
+    </style>
 
 
     <h1>LEILÕES TUDO NOSSO</h1>
@@ -38,7 +43,6 @@
     </table>
 
 
-
 </head>
 
 <tbody>
@@ -53,7 +57,7 @@
                 <td>${l.nome}</td>
                 <td>${l.email}</td>
                 <td>${l.senha}</td>
-                <td><a href="entrada?acao=deletaCliente&id=${l.id}"> excluir </a> </td>
+                <td><a href="entrada?acao=deletaCliente&id=${l.id}"> excluir </a></td>
                 <td><a href="entrada?acao=upgradeCliente&id=${l.id}"> Upgrade </a></td>
             </tr>
 

@@ -18,7 +18,7 @@ public class ListarCliente {
     private final HttpServletRequest req;
     private final HttpServletResponse resp;
 
-    public ListarCliente(HttpServletResponse resp, HttpServletRequest req){
+    public ListarCliente(HttpServletResponse resp, HttpServletRequest req) {
         this.resp = resp;
         this.req = req;
     }

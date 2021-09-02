@@ -37,29 +37,14 @@ public class LanceDao {
         return query.getResultList();
     }
 
-    public static void main(String[] args) {
-
-        BancoDeDados conexao = new BancoDeDados();
-        LanceDao dao = new LanceDao();
-        Lance lance = new Lance();
-        //dao.BuscaNomedoCabraLaPraVerSeONomeEIgualAoUtimo((Lance) list);
-
-        //System.out.println(dao.BuscaNomedoCabraLaPraVerSeONomeEIgualAoUtimo((Lance) list));
-
-//        lance.setObjeto("rtx 3060");
-//        lance.setNome("admin");
-//        lance.setValor(1);
-//        dao.Cadastro(lance);
-
-        List <Lance> list = new LanceDao().Seguinte_Professor_EuFiqueiUmaTardeInteiraPraFazerIsto_ParaNaoUsar_MasComoEUGasteiUmaTardeInteira_ElaVaiFicarAki_TiveQueAprenderHQL("Ps5");
-        List<String> valor = new ArrayList<>();
-        for(Lance l : list) {
-            valor.add(l.getNome());
-        }
-        String veficarNome = valor.get(valor.size() -1);
-        System.out.println(veficarNome);
-
+    public void deleta(int IDleilao) {
+        conexao.session.getTransaction().begin();
+        Lance lance = conexao.session.find(Lance.class, IDleilao);
+        conexao.session.remove(lance);
+        conexao.session.getTransaction().commit();
     }
+
+
 
 }
 

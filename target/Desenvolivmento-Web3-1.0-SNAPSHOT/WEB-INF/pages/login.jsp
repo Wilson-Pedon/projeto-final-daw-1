@@ -10,17 +10,18 @@
 <head>
     <title>LOGIN</title>
 
-    <style><%@include file="/WEB-INF/pages/login.css"%></style>
+    <style>
+        <%@include file="/WEB-INF/style/login.css" %>
+    </style>
 
 
 </head>
 <body>
 
 
-
 <form action="entrada?acao=login" method="post">
     <div>
-        <img src="${pageContext.request.contextPath}/perfil.png" alt="Comunismo" width="400px">
+        <img src="${pageContext.request.contextPath}/WEB-INF/img/perfil.png" alt="Comunismo" width="400px">
 
         <h1>LOGIN</h1>
 

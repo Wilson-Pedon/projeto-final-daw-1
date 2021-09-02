@@ -15,7 +15,7 @@ public class novoLogin {
     private final HttpServletRequest req;
     private final HttpServletResponse resp;
 
-    public novoLogin(HttpServletRequest req, HttpServletResponse resp){
+    public novoLogin(HttpServletRequest req, HttpServletResponse resp) {
         this.req = req;
         this.resp = resp;
     }
@@ -29,15 +29,14 @@ public class novoLogin {
 
         List<Cliente> cliente = new ClienteDao().findAll();
         for (Cliente l : cliente) {
-            if(user != null && (user.equals(l.getNome()) && senha.equals(l.getSenha()))){
+            if (user != null && (user.equals(l.getNome()) && senha.equals(l.getSenha()))) {
                 HttpSession session = req.getSession();
                 session.setAttribute("usuarioLogado", user);
                 //resp.sendRedirect(req.getServletContext().getContextPath() + "/entrada?acao=leilaoAberto");
                 req.getRequestDispatcher("/WEB-INF/pages/erro.jsp").forward(req, resp);
-
                 return;
             }
         }
-            req.getRequestDispatcher("/WEB-INF/pages/login.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/pages/login.jsp").forward(req, resp);
     }
 }

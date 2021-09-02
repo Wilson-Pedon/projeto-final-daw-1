@@ -21,31 +21,25 @@ public class LeilaoRegras {
     private LeilaoDaoSession dao = new LeilaoDaoSession();
 
 
-    public LeilaoRegras(LeilaoDaoSession dao){
+    public LeilaoRegras(LeilaoDaoSession dao) {
         this.dao = dao;
     }
 
-    public LeilaoRegras(){}
+    public LeilaoRegras() {
+    }
 
 
-
-    public List filtroLeilaoNome(String status){
-        if(status.equals("Todos")) {
+    public List filtroLeilaoNome(String status) {
+        if (status.equals("Todos")) {
             return dao.BuscarTodos();
-        }
-        else{
+        } else {
             return dao.BuscarNome(status);
         }
     }
 
-    public List buscarApenasAbertos() {
-        System.out.println(dao.BuscarNome("Aberto"));
-        return dao.BuscarNome("Aberto");
-    }
-
-    public void finalizaLeilao(Leilao leilao, String email){
+    public void finalizaLeilao(Leilao leilao, String email) {
         LanceRegras lanceRegras = new LanceRegras();
-        if(leilao.getStatus().equals("Aberto") || leilao.getStatus().equals("Expirado")){
+        if (leilao.getStatus().equals("Aberto") || leilao.getStatus().equals("Expirado")) {
             leilao.setStatus("Finalizado");
             leilao.setId(leilao.getId());
             leilao.setNome(leilao.getNome());
@@ -56,7 +50,7 @@ public class LeilaoRegras {
         }
     }
 
-    public void expiraLeilao(Leilao leilao){
+    public void expiraLeilao(Leilao leilao) {
         LocalDate date = LocalDate.now();
         String.valueOf(date);
         String.valueOf(leilao.getData());
@@ -66,13 +60,10 @@ public class LeilaoRegras {
         }
     }
 
-    public void cadastraInativo(Leilao leilao){
+    public void cadastraInativo(Leilao leilao) {
         leilao.setStatus("Inativo");
         dao.Cadastro(leilao);
     }
-
-
-
 
 
 }

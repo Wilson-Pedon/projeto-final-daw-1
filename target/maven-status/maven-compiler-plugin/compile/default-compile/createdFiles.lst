@@ -4,12 +4,13 @@ DAO\LeilaoDaoSession.class
 acao\ListadeLeilaoAberto.class
 DAO\LeilaoDao.class
 service\cadastroCliente.class
+regraDeNegocio\LanceRegras.class
 acao\ListarLeilaoLance.class
 DAO\ClienteDao.class
-acao\valorDiferenteLance.class
 model\Cliente.class
 DAO\LanceDao.class
 acao\expirarData.class
+regraDeNegocio\LanceRegras$1.class
 acao\ListarCliente.class
 acao\DeletarCliente.class
 acao\NovoLeilao.class
@@ -26,7 +27,6 @@ model\Leilao.class
 acao\DeletarLeilao.class
 acao\CadastrarLeilao.class
 regraDeNegocio\LeilaoRegras.class
-acao\finalizarLeilao$1.class
 acao\CadastraLance.class
 acao\expirarData$1.class
 acao\NovoUpdateCliente.class

@@ -9,11 +9,12 @@
 <html>
 <head>
     <title>Title</title>
-    <style><%@include file="/WEB-INF/pages/butaoquepisca.css"%></style>
+    <style>
+        <%@include file="/WEB-INF/style/butaoquepisca.css" %>
+    </style>
 
 </head>
 <body>
-
 
 
 <form action="cadastro_cliente" method="post">

@@ -11,9 +11,15 @@
 <head>
     <title>Leilao</title>
 
-    <style><%@include file="/WEB-INF/pages/lista.css"%></style>
-    <style><%@include file="/WEB-INF/pages/butaoquepisca.css"%></style>
-    <style><%@include file="/WEB-INF/pages/butaolink.css"%></style>
+    <style>
+        <%@include file="/WEB-INF/style/lista.css" %>
+    </style>
+    <style>
+        <%@include file="/WEB-INF/style/butaoquepisca.css" %>
+    </style>
+    <style>
+        <%@include file="/WEB-INF/style/butaolink.css" %>
+    </style>
 
 
     <h1> LEILÕES TUDO NOSSO</h1>
@@ -38,8 +44,8 @@
 
 </form>
 
-    <a href="entrada?acao=leilaoAberto">Lista De Leiões</a>
-    <a href="http://localhost:8080/Desenvolivmento_Web3_war/">Inicio</a>
+<a href="entrada?acao=leilaoAberto">Lista De Leiões</a>
+<a href="http://localhost:8080/Desenvolivmento_Web3_war/">Inicio</a>
 
 </body>
 
@@ -54,7 +60,6 @@
     </tr>
     </thead>
 </table>
-
 
 
 </head>

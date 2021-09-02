@@ -1,10 +1,12 @@
 package integracao;
 
+import DAO.LanceDao;
 import model.Lance;
 import model.Leilao;
 import org.junit.Test;
 import regraDeNegocio.LanceRegras;
 import org.junit.Assert;
+import static org.junit.Assert.assertEquals;
 import regraDeNegocio.LeilaoRegras;
 
 
@@ -12,6 +14,7 @@ public class LanceRegrasTeste {
 
     private LanceRegras lr = new LanceRegras();
     private LeilaoRegras le = new LeilaoRegras();
+    private LanceDao dao = new LanceDao();
 
 
     @Test

@@ -11,10 +11,15 @@
 <head>
     <title>Leilao</title>
 
-    <style><%@include file="/WEB-INF/pages/lista.css"%></style>
-    <style><%@include file="/WEB-INF/pages/butaoquepisca.css"%></style>
-    <style><%@include file="/WEB-INF/pages/butaolink.css"%></style>
-
+    <style>
+        <%@include file="/WEB-INF/style/lista.css" %>
+    </style>
+    <style>
+        <%@include file="/WEB-INF/style/butaoquepisca.css" %>
+    </style>
+    <style>
+        <%@include file="/WEB-INF/style/butaolink.css" %>
+    </style>
 
 
     <h1> LEILÕES TUDO NOSSO</h1>
@@ -26,18 +31,17 @@
     <a href="entrada?acao=logaut">Sair</a>
 
 
-<table>
-    <thead>
-    <tr>
-        <th>Nome</th>
-        <th>Valor</th>
-        <th>Data</th>
-        <th>Status</th>
-        <th>Ações</th>
-    </tr>
-    </thead>
-</table>
-
+    <table>
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Valor</th>
+            <th>Data</th>
+            <th>Status</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+    </table>
 
 
 </head>
@@ -54,7 +58,9 @@
                 <td>${l.valorMinimo}</td>
                 <td>${l.data}</td>
                 <td>${l.status}</td>
-                <td><a href="entrada?acao=filtroLance&nome=${l.nome}&usuario=${usuarioLogado}&valorMinimo=${valorMinimo}"> Fazer-Lance </a></td>
+                <td>
+                    <a href="entrada?acao=filtroLance&nome=${l.nome}&usuario=${usuarioLogado}&valorMinimo=${valorMinimo}">
+                        Fazer-Lance </a></td>
             </tr>
 
         </c:forEach>

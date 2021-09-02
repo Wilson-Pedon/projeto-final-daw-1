@@ -9,20 +9,27 @@
 <html>
 <head>
     <title>Title</title>
-    <style><%@include file="/WEB-INF/pages/butaolink.css"%></style>
+    <style><%@include file="/WEB-INF/style/telaprincipal.css"%></style>
 
 </head>
 <body>
+<nav id="main-navbar">
+<div id="navbar-navLogo">
+    <h1>Leilao Tudo Nosso</h1>
+</div>
 
-<h1>Leilao Tudo Nosso</h1>
+    <div id="navbar-menu">
+    <a href="entrada?acao=novoLeilao">Cadastrar leilão</a>
+    <a href="entrada?acao=listarLeilao">Lista de leilões</a>
+    <a href="cadastro_cliente">Cadastrar Cliente</a>
+    <a href="entrada?acao=listarCliente">Lista de Clientes</a>
+    <a href="entrada?acao=leilaoAberto" >Lista de Leilões Abertos</a>
+    </div>
 
-<a href="entrada?acao=novoLeilao">Cadastrar leilão</a>
-<a href="entrada?acao=listarLeilao">Lista de leilões</a>
-<a href="cadastro_cliente">Cadastrar Cliente</a>
-<a href="entrada?acao=listarCliente">Lista de Clientes</a>
-<a href="entrada?acao=leilaoAberto" >Lista de Leilões Abertos</a>
+</nav>
 
-<img src="${pageContext.request.contextPath}/Logo_Do_Site.jpg" alt="Comunismo" width="400px">
+<img src="${pageContext.request.contextPath}/Logo_Do_Site.jpg" alt="Comunismo" width=1370 height=550 center="auto">
+
 
 </body>
 </html>

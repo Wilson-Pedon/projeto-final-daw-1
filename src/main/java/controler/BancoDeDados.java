@@ -14,7 +14,7 @@ public class BancoDeDados {
 
     public static EntityManagerFactory emf = Persistence.createEntityManagerFactory("exemplo-jpa");
     public static EntityManager em = emf.createEntityManager();
-    public static SessionFactory sessionFactory =  new Configuration().configure().buildSessionFactory();
+    public static SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
     public static Session session = sessionFactory.openSession();
     public static StringBuilder jpql = new StringBuilder();
 

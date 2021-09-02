@@ -11,13 +11,13 @@ public class ClienteDao {
 
     private final BancoDeDados conexao = new BancoDeDados();
 
-    public void cadastro(Cliente cliente){
+    public void cadastro(Cliente cliente) {
 
         try {
             conexao.session.getTransaction().begin();
             conexao.session.save(cliente);
             conexao.session.getTransaction().commit();
-        } catch (Exception ex){
+        } catch (Exception ex) {
             ex.printStackTrace();
             conexao.session.getTransaction().rollback();
         }
@@ -31,7 +31,7 @@ public class ClienteDao {
         return conexao.em.find(Cliente.class, id);
     }
 
-    public List BuscarNome(String nome){
+    public List BuscarNome(String nome) {
         Query query = conexao.session.createQuery("from Cliente where nome = :nome ");
         query.setParameter("nome", nome);
         return query.getResultList();
@@ -43,33 +43,22 @@ public class ClienteDao {
             Cliente cliente = conexao.em.find(Cliente.class, IDCliente);
             conexao.em.remove(cliente);
             conexao.em.getTransaction().commit();
-        }catch (Exception ex){
+        } catch (Exception ex) {
             ex.printStackTrace();
             conexao.em.getTransaction().rollback();
         }
     }
 
-    public void update(Cliente cliente){
-        try{
+    public void update(Cliente cliente) {
+        try {
             conexao.em.getTransaction().begin();
             conexao.em.merge(cliente);
             conexao.em.getTransaction().commit();
-        } catch (Exception ex){
+        } catch (Exception ex) {
             ex.printStackTrace();
             conexao.em.getTransaction().rollback();
         }
     }
-
-
-    public static void main(String[] args) {
-
-        List <Cliente> cliente = new ClienteDao().findAll();
-        for (Cliente l : cliente) {
-            System.out.println(l.getNome() + l.getSenha());
-        }
-    }
-
-
-    }
+}
 
 

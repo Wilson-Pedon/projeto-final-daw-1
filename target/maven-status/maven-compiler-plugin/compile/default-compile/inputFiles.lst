@@ -1,5 +1,4 @@
 D:\TestedeSw\Desenvolivmento-Leilao\src\main\java\acao\Logaut.java
-D:\TestedeSw\Desenvolivmento-Leilao\src\main\java\acao\valorDiferenteLance.java
 D:\TestedeSw\Desenvolivmento-Leilao\src\main\java\model\Cliente.java
 D:\TestedeSw\Desenvolivmento-Leilao\src\main\java\acao\CadastrarLeilao.java
 D:\TestedeSw\Desenvolivmento-Leilao\src\main\java\acao\finalizarLeilao.java
@@ -21,6 +20,7 @@ D:\TestedeSw\Desenvolivmento-Leilao\src\main\java\acao\ListarCliente.java
 D:\TestedeSw\Desenvolivmento-Leilao\src\main\java\acao\UpdateLeilaoAcao.java
 D:\TestedeSw\Desenvolivmento-Leilao\src\main\java\acao\NovoUpdate.java
 D:\TestedeSw\Desenvolivmento-Leilao\src\main\java\DAO\LanceDao.java
+D:\TestedeSw\Desenvolivmento-Leilao\src\main\java\regraDeNegocio\LanceRegras.java
 D:\TestedeSw\Desenvolivmento-Leilao\src\main\java\acao\FiltroLeilao.java
 D:\TestedeSw\Desenvolivmento-Leilao\src\main\java\acao\ListadeLeilaoAberto.java
 D:\TestedeSw\Desenvolivmento-Leilao\src\main\java\regraDeNegocio\LeilaoRegras.java

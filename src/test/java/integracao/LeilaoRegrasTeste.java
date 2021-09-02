@@ -7,6 +7,8 @@ import model.Leilao;
 import org.junit.Test;
 import regraDeNegocio.LanceRegras;
 import regraDeNegocio.LeilaoRegras;
+import static org.junit.Assert.assertEquals;
+
 
 
 import java.time.LocalDate;
@@ -21,18 +23,17 @@ public class LeilaoRegrasTeste {
 
 
     @Test
-    public void CadastraLance(){
+    public void filtraTodos(){
        List<Leilao> list =  leilaoRegras.filtroLeilaoNome("Todos");
-       System.out.println(list.size());
        List<Leilao> listBanco =  dao.BuscarTodos();
-       System.out.println(listBanco.size());
-
+       assertEquals(list.size(), listBanco.size());
     }
 
     @Test
     public void umLeilaoSoPodeSerCadastradoInativo(){
-        Leilao leilao = new Leilao("jojo", 50,null,"Aberto");
+        Leilao leilao = new Leilao(10,"jojo", 50,null,"Aberto");
         leilaoRegras.cadastraInativo(leilao);
+        assertEquals("jojo", leilao.getNome());
     }
 
     @Test
@@ -43,13 +44,15 @@ public class LeilaoRegrasTeste {
         daoLance.Cadastro(lance);
         String email = lanceRegras.UtimoLance("wiLson");
         leilaoRegras.finalizaLeilao(leilao, email);
+        assertEquals("Finalizado", leilao.getStatus());
+        leilao.setStatus(leilao.getStatus());
     }
 
     @Test
     public void expiraData(){
-        Leilao leilao = new Leilao("wiLson", 50, LocalDate.parse("2021-09-01"), "Aberto");
-        dao.Cadastro(leilao);
+        Leilao leilao = new Leilao("wiLson", 50, LocalDate.parse("2021-09-02"), "Aberto");
         leilaoRegras.expiraLeilao(leilao);
+        assertEquals("Expirado", leilao.getStatus());
     }
 
 

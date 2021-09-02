@@ -10,7 +10,7 @@ public class NovoUpdateCliente {
     private final HttpServletRequest req;
     private final HttpServletResponse resp;
 
-    public NovoUpdateCliente(HttpServletRequest req, HttpServletResponse resp){
+    public NovoUpdateCliente(HttpServletRequest req, HttpServletResponse resp) {
         this.req = req;
         this.resp = resp;
     }
@@ -20,10 +20,10 @@ public class NovoUpdateCliente {
         String nome = req.getParameter("nome");
         String email = (req.getParameter("cadastra-email"));
         String senha = req.getParameter("cadastra-senha");
-        req.setAttribute("pID" , id);
+        req.setAttribute("pID", id);
         req.setAttribute("nome", nome);
-        req.setAttribute("cadastra-email",email);
-        req.setAttribute("cadastra-senha",senha);
+        req.setAttribute("cadastra-email", email);
+        req.setAttribute("cadastra-senha", senha);
         req.getRequestDispatcher("/WEB-INF/pages/upgrade-cliente.jsp").forward(req, resp);
         System.out.println("O id é: " + id + nome + email + senha);
     }

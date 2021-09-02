@@ -56,10 +56,11 @@ public void finalizaLeilao(){
 
 @Test
 public void expiraData() {
-    Leilao leilao = new Leilao("wiLson", 50, LocalDate.parse("2021-09-01"), "Aberto");
+    Leilao leilao = new Leilao("wiLson", 50, LocalDate.parse("2021-09-02"), "Aberto");
     leilaoRegras.expiraLeilao(leilao);
     assertEquals("Expirado", leilao.getStatus());
 }
+
 
 
 }

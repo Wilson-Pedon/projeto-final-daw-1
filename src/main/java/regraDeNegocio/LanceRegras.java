@@ -22,18 +22,20 @@ public class LanceRegras {
 
     private LanceDao dao = new LanceDao();
 
-    public LanceRegras(LanceDao dao){
+    public LanceRegras(LanceDao dao) {
         this.dao = dao;
     }
-    public LanceRegras(){}
+
+    public LanceRegras() {
+    }
 
 
-    public void CadastramentoDeLances(Lance lance, String veficarNome, float veficarvalor, int valorMinino)  {
-        if(NaoCadastraMenorQueOValorMinino(lance, valorMinino)){
+    public void CadastramentoDeLances(Lance lance, String veficarNome, float veficarvalor, int valorMinino) {
+        if (NaoCadastraMenorQueOValorMinino(lance, valorMinino)) {
             System.out.println("Passou no valor Minimo");
-            if(NaoCadastraLanceComNomeIgual(lance, veficarNome)){
+            if (NaoCadastraLanceComNomeIgual(lance, veficarNome)) {
                 System.out.println("Passou no nome ");
-                if(NaoCadastraLanceComValorIgual(lance,veficarvalor)){
+                if (NaoCadastraLanceComValorIgual(lance, veficarvalor)) {
                     System.out.println("Passou no valor");
                     dao.Cadastro(lance);
                 }
@@ -41,25 +43,25 @@ public class LanceRegras {
         }
     }
 
-    public Boolean NaoCadastraLanceComNomeIgual(Lance lance, String veficarNome){
-         if((lance.getNome().equals(veficarNome))){
-             return false;
-         }else {
-             return true;
-         }
+    public Boolean NaoCadastraLanceComNomeIgual(Lance lance, String veficarNome) {
+        if ((lance.getNome().equals(veficarNome))) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
-    public Boolean NaoCadastraLanceComValorIgual(Lance lance, float veficarvalor){
+    public Boolean NaoCadastraLanceComValorIgual(Lance lance, float veficarvalor) {
         return lance.getValor() > veficarvalor;
     }
 
-    public Boolean NaoCadastraMenorQueOValorMinino(Lance lance, int valorMinino){
+    public Boolean NaoCadastraMenorQueOValorMinino(Lance lance, int valorMinino) {
         return lance.getValor() >= valorMinino;
     }
 
-    public String UtimoLance(String nome){
+    public String UtimoLance(String nome) {
         List<String> email1 = new ArrayList<>();
-        List <Lance> list = BuscaOResultadoDeUmLeilao(nome);
+        List<Lance> list = BuscaOResultadoDeUmLeilao(nome);
         for (Lance l : list) {
             email1.add(l.getEmail());
         }
@@ -67,14 +69,14 @@ public class LanceRegras {
         return veficarEmail;
     }
 
-    public List BuscaOResultadoDeUmLeilao(String nome){
-        List <Lance> list = new LanceDao().BuscarObjeto(nome);
+    public List BuscaOResultadoDeUmLeilao(String nome) {
+        List<Lance> list = new LanceDao().BuscarObjeto(nome);
         return list;
     }
 
-    public void EnviaEmail(String veficarEmail){
+    public void EnviaEmail(String veficarEmail) {
         String email = "wilsonpedon4@gmail.com";
-        String senha = "lmutcvxglynenndj";
+        String senha = "";
         String mensagem = "Parabens o Senhor Ganhou o leilao!!!!! ";
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");

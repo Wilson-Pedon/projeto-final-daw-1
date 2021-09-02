@@ -1,2 +1,6 @@
-org\hibernate\dialect\MySQL8Dialect.class
+integracao\LeilaoRegrasTeste.class
 Unitario\RegrasDeNegocio\LeilaoRegrasTeste.class
+Unitario\RegrasDeNegocio\LanceRegrasTeste.class
+org\hibernate\dialect\MySQL8Dialect.class
+integracao\LanceRegrasTeste.class
+interfaceTeste\TestesInterface.class

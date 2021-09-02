@@ -34,15 +34,16 @@ public class UpdateLeilaoAcao {
         Integer valorMinimo = Integer.valueOf(req.getParameter("valor"));
         LocalDate data = LocalDate.parse(req.getParameter("data"));
         String status = req.getParameter("status");
-        Leilao leilao = new Leilao((campoNome),valorMinimo,data,status);
+        Leilao leilao = new Leilao((campoNome), valorMinimo, data, status);
 
 
         leilao.setId(Integer.parseInt(id));
 
-        if(status.equals("Aberto")){
+        if (status.equals("Aberto")) {
             lance.setObjeto(campoNome);
             lance.setNome("Lances Apartir de:");
             lance.setValor(valorMinimo);
+            lance.setEmail("wilsonpedon1@hotmail.com");
             ldao.Cadastro(lance);
         }
         dao.update(leilao);

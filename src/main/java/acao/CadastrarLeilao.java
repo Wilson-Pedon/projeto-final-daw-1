@@ -14,20 +14,18 @@ public class CadastrarLeilao {
     private final HttpServletResponse resp;
     private final HttpServletRequest req;
 
-    public CadastrarLeilao(HttpServletResponse resp, HttpServletRequest req){
+    public CadastrarLeilao(HttpServletResponse resp, HttpServletRequest req) {
         this.resp = resp;
         this.req = req;
     }
 
     public void executa() throws IOException {
         LeilaoDaoSession dao = new LeilaoDaoSession();
-        System.out.println("Cadastrou");
         String campoNome = req.getParameter("objeto");
         Integer valorMinimo = Integer.valueOf(req.getParameter("valor"));
         LocalDate data = LocalDate.parse(req.getParameter("data"));
         String status = req.getParameter("status");
-        System.out.println("status : " + status);
-        Leilao leilao = new Leilao(campoNome,valorMinimo, data, status);
+        Leilao leilao = new Leilao(campoNome, valorMinimo, data, status);
         LeilaoRegras leilaoRegras = new LeilaoRegras();
         leilaoRegras.cadastraInativo(leilao);
         dao.Cadastro(leilao);

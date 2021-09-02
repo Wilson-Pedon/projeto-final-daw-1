@@ -18,7 +18,7 @@ public class expirarData {
     private final HttpServletRequest req;
     private final HttpServletResponse resp;
 
-    public expirarData(HttpServletResponse resp, HttpServletRequest req){
+    public expirarData(HttpServletResponse resp, HttpServletRequest req) {
         this.resp = resp;
         this.req = req;
     }
@@ -28,15 +28,15 @@ public class expirarData {
         Calendar c = Calendar.getInstance();
         java.util.Date data = c.getTime();
         LocalDate date = dao.convertToLocalDateViaInstant(data);
-        List <Leilao> list = new LeilaoDaoSession().BuscarData(date);
+        List<Leilao> list = new LeilaoDaoSession().BuscarData(date);
         LeilaoRegras leilaoRegras = new LeilaoRegras();
-        new Timer().scheduleAtFixedRate(new TimerTask(){
+        new Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
-            public void run(){
+            public void run() {
                 for (Leilao l : list) {
-                        leilaoRegras.expiraLeilao(l);
+                    leilaoRegras.expiraLeilao(l);
                 }
             }
-        },0,5000);
+        }, 0, 5000);
     }
 }

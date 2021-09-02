@@ -15,7 +15,7 @@ public class DeletarLeilao {
     private final HttpServletRequest req;
     private final HttpServletResponse resp;
 
-    public DeletarLeilao(HttpServletResponse resp, HttpServletRequest req){
+    public DeletarLeilao(HttpServletResponse resp, HttpServletRequest req) {
         this.resp = resp;
         this.req = req;
     }
@@ -23,13 +23,10 @@ public class DeletarLeilao {
     public void executa() throws ServletException, IOException {
         LeilaoDaoSession dao = new LeilaoDaoSession();
         String id = req.getParameter("id");
-        System.out.println("O id é: " + id);
         dao.deleta(Integer.parseInt(id));
 
-        ListarLeilao listarLeilao = new ListarLeilao(resp,req);
+        ListarLeilao listarLeilao = new ListarLeilao(resp, req);
         listarLeilao.executa();
-
-
 
 
     }

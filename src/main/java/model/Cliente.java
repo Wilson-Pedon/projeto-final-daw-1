@@ -16,13 +16,14 @@ public class Cliente {
     private String email;
 
 
-    public Cliente(String nome, String senha, String email){
+    public Cliente(String nome, String senha, String email) {
         this.nome = nome;
         this.senha = senha;
         this.email = email;
     }
 
-    public Cliente() {}
+    public Cliente() {
+    }
 
 
     public String getNome() {
@@ -56,12 +57,6 @@ public class Cliente {
     public void setId(int id) {
         this.id = id;
     }
-
-
-
-
-
-
 
 
 }

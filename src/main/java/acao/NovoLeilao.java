@@ -10,7 +10,7 @@ public class NovoLeilao {
     private final HttpServletRequest req;
     private final HttpServletResponse resp;
 
-    public NovoLeilao(HttpServletRequest req, HttpServletResponse resp){
+    public NovoLeilao(HttpServletRequest req, HttpServletResponse resp) {
         this.req = req;
         this.resp = resp;
     }

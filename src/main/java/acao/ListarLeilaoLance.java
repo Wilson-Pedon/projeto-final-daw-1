@@ -16,7 +16,7 @@ public class ListarLeilaoLance {
     private final HttpServletRequest req;
     private final HttpServletResponse resp;
 
-    public ListarLeilaoLance(HttpServletResponse resp, HttpServletRequest req){
+    public ListarLeilaoLance(HttpServletResponse resp, HttpServletRequest req) {
         this.resp = resp;
         this.req = req;
     }

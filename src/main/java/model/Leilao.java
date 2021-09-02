@@ -16,7 +16,7 @@ public class Leilao {
     private String status;
 
 
-    public Leilao(int id, String nome, Integer valorMinimo, LocalDate data, String status){
+    public Leilao(int id, String nome, Integer valorMinimo, LocalDate data, String status) {
         this.nome = nome;
         this.valorMinimo = valorMinimo;
         this.data = data;
@@ -32,7 +32,8 @@ public class Leilao {
         this.status = status;
     }
 
-    public Leilao() {}
+    public Leilao() {
+    }
 
     public String getStatus() {
         return status;

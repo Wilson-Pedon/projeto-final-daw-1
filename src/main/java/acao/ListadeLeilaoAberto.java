@@ -16,7 +16,7 @@ public class ListadeLeilaoAberto {
     private final HttpServletResponse resp;
     private final HttpServletRequest req;
 
-    public ListadeLeilaoAberto(HttpServletResponse resp, HttpServletRequest req){
+    public ListadeLeilaoAberto(HttpServletResponse resp, HttpServletRequest req) {
         this.resp = resp;
         this.req = req;
     }

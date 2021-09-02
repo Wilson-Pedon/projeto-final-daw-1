@@ -20,14 +20,23 @@ public class Lance {
     private float valor;
 
 
-    public Lance(String nome, String objeto, float valor, String email){
+    public Lance(String nome, String objeto, float valor, String email) {
         this.nome = nome;
         this.valor = valor;
         this.objeto = objeto;
         this.email = email;
     }
 
-    public Lance(){}
+    public Lance(int id, String nome, String objeto, float valor, String email) {
+        this.nome = nome;
+        this.valor = valor;
+        this.objeto = objeto;
+        this.email = email;
+        this.id = id;
+    }
+
+    public Lance() {
+    }
 
 
     public String getEmail() {

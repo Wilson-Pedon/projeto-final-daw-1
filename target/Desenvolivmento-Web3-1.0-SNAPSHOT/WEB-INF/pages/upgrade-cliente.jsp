@@ -10,8 +10,12 @@
 <head>
 
     <title>Title</title>
-    <style><%@include file="/WEB-INF/pages/butaoquepisca.css"%></style>
-    <style><%@include file="/WEB-INF/pages/butaolink.css"%></style>
+    <style>
+        <%@include file="/WEB-INF/style/butaoquepisca.css" %>
+    </style>
+    <style>
+        <%@include file="/WEB-INF/style/butaolink.css" %>
+    </style>
 
 
 </head>

@@ -18,7 +18,7 @@ public class FiltroLeilao {
     private final HttpServletRequest req;
     private final HttpServletResponse resp;
 
-    public FiltroLeilao(HttpServletResponse resp, HttpServletRequest req){
+    public FiltroLeilao(HttpServletResponse resp, HttpServletRequest req) {
         this.resp = resp;
         this.req = req;
     }
@@ -27,50 +27,10 @@ public class FiltroLeilao {
         String tipo = req.getParameter("filtro-status");
         System.out.println("O tipo de status é : " + tipo);
 
-                List <Leilao> list = new LeilaoRegras().filtroLeilaoNome(tipo);
-                RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/pages/listadeleiloes.jsp");
-                req.setAttribute("list", list);
-                dispatcher.forward(req, resp);
-
-//            if (tipo.equals("Aberto")) {
-//
-//                System.out.println("Entrou no Aberto");
-//                List <Leilao> list = new LeilaoDaoSession().BuscarNome("Aberto");
-//
-//                RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/pages/listadeleiloes.jsp");
-//                req.setAttribute("list", list);
-//                dispatcher.forward(req, resp);
-//
-//            }else if(tipo.equals("Todos")){
-//
-//                System.out.println("Entrou no Todos");
-//                ListarLeilao listarLeilao = new ListarLeilao(resp,req);
-//                listarLeilao.executa();
-//
-//            }else if(tipo.equals("Finalizado")){
-//
-//                System.out.println("Entrou no Fechado");
-//                List <Leilao> list = new LeilaoDaoSession().BuscarNome("Finalizado");
-//                RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/pages/listadeleiloes.jsp");
-//                req.setAttribute("list", list);
-//                dispatcher.forward(req, resp);
-//
-//            }else if(tipo.equals("Expirado")){
-//
-//                System.out.println("Entrou no Expirado");
-//                List <Leilao> list = new LeilaoDaoSession().BuscarNome("Expirado");
-//                RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/pages/listadeleiloes.jsp");
-//                req.setAttribute("list", list);
-//                dispatcher.forward(req, resp);
-//
-//            }else if(tipo.equals("Inativo")){
-//
-//                System.out.println("Entrou no Inativo");
-//                List <Leilao> list = new LeilaoDaoSession().BuscarNome("inativo");
-//                RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/pages/listadeleiloes.jsp");
-//                req.setAttribute("list", list);
-//                dispatcher.forward(req, resp);
-//            }
+        List<Leilao> list = new LeilaoRegras().filtroLeilaoNome(tipo);
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/pages/listadeleiloes.jsp");
+        req.setAttribute("list", list);
+        dispatcher.forward(req, resp);
     }
 
 

@@ -21,22 +21,14 @@ public class UpgradeClienteAcao {
 
     public void executa() throws IOException, ServletException {
 
-
-        System.out.println("entrou no upgrade!!!!!!!!!!!!!!!!!!!!!!");
         String id = req.getParameter("pID");
         ClienteDao dao = new ClienteDao();
-
         String nome = req.getParameter("cadastra-nome");
         String Email = req.getParameter("cadastra-email");
         String senha = req.getParameter("cadastra-senha");
-
-
-        Cliente cliente = new Cliente(nome,Email,senha);
-
-
+        Cliente cliente = new Cliente(nome, Email, senha);
         cliente.setId(Integer.parseInt(id));
         dao.update(cliente);
-
         resp.sendRedirect(req.getServletContext().getContextPath() + "/entrada?acao=listarCliente");
 
     }
