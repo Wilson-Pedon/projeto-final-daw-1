@@ -40,7 +40,8 @@ public class finalizarLeilao {
         //=============================================================
         LeilaoRegras leilaoRegras = new LeilaoRegras();
         String email = lanceRegras.UtimoLance(nome);
-        leilaoRegras.finalizaLeilao(leilao, email);
+        String texto = "Parabens o Senhor Ganhou o leilao do" + nome + "";
+        leilaoRegras.finalizaLeilao(leilao, email, texto);
         ListarLeilao listarLeilao = new ListarLeilao(resp, req);
         listarLeilao.executa();
     }

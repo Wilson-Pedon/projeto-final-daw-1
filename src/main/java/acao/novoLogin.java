@@ -32,7 +32,6 @@ public class novoLogin {
             if (user != null && (user.equals(l.getNome()) && senha.equals(l.getSenha()))) {
                 HttpSession session = req.getSession();
                 session.setAttribute("usuarioLogado", user);
-                //resp.sendRedirect(req.getServletContext().getContextPath() + "/entrada?acao=leilaoAberto");
                 req.getRequestDispatcher("/WEB-INF/pages/erro.jsp").forward(req, resp);
                 return;
             }

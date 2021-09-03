@@ -43,7 +43,7 @@ public class LeilaoRegrasTeste {
         Lance lance = new Lance("Wilson", "wiLson", 500, "netofelipeferreira1@gmail.com");
         daoLance.Cadastro(lance);
         String email = lanceRegras.UtimoLance("wiLson");
-        leilaoRegras.finalizaLeilao(leilao, email);
+        leilaoRegras.finalizaLeilao(leilao, email, email);
         assertEquals("Finalizado", leilao.getStatus());
         leilao.setStatus(leilao.getStatus());
     }

@@ -74,10 +74,10 @@ public class LanceRegras {
         return list;
     }
 
-    public void EnviaEmail(String veficarEmail) {
+    public void EnviaEmail(String texto, String veficarEmail) {
         String email = "wilsonpedon4@gmail.com";
-        String senha = "";
-        String mensagem = "Parabens o Senhor Ganhou o leilao!!!!! ";
+        String senha = "lmutcvxglynenndj";
+        String mensagem = texto;
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
         props.put("mail.smtp.socketFactory.port", "465");

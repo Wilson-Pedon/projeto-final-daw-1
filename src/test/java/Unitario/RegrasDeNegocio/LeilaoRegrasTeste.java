@@ -50,7 +50,7 @@ public void finalizaLeilao(){
     Leilao leilao = new Leilao("wiLson", 50, null, "Aberto");
     Lance lance = new Lance("Wilson", "wiLson", 500, "netofelipeferreira1@gmail.com");
     daoFake.Cadastro(leilao);
-    leilaoRegras.finalizaLeilao(leilao, lance.getEmail());
+    leilaoRegras.finalizaLeilao(leilao, null, lance.getEmail());
     assertEquals("Finalizado", leilao.getStatus());
 }
 

@@ -1,20 +1,10 @@
 package regraDeNegocio;
 
-import DAO.LeilaoDao;
 import DAO.LeilaoDaoSession;
-import acao.ListarLeilao;
-import model.Lance;
 import model.Leilao;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.time.LocalDate;
-import java.util.Calendar;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class LeilaoRegras {
 
@@ -37,7 +27,7 @@ public class LeilaoRegras {
         }
     }
 
-    public void finalizaLeilao(Leilao leilao, String email) {
+    public void finalizaLeilao(Leilao leilao, String s, String email) {
         LanceRegras lanceRegras = new LanceRegras();
         if (leilao.getStatus().equals("Aberto") || leilao.getStatus().equals("Expirado")) {
             leilao.setStatus("Finalizado");
@@ -46,7 +36,7 @@ public class LeilaoRegras {
             leilao.setValorMinimo(leilao.getValorMinimo());
             leilao.setData(leilao.getData());
             dao.update(leilao);
-            lanceRegras.EnviaEmail(email);
+            lanceRegras.EnviaEmail(email, s);
         }
     }
 

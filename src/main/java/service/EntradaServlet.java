@@ -2,7 +2,6 @@ package service;
 
 
 import acao.*;
-import org.hibernate.sql.Update;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -124,7 +123,7 @@ public class EntradaServlet extends HttpServlet {
             novoLogin novoLogin = new novoLogin(req, resp);
             novoLogin.executa();
         } else if (acao.equals("logaut")) {
-            Logaut logaut = new Logaut(resp, req);
+            Logout logaut = new Logout(resp, req);
             logaut.executa();
         }
 
